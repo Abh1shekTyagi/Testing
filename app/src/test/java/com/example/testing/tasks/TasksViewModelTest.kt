@@ -1,6 +1,7 @@
 package com.example.testing.tasks
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.testing.data.Task
 import com.example.testing.data.source.FakeTaskRepository
 import com.example.testing.getOrAwaitValue
@@ -11,8 +12,9 @@ import org.hamcrest.core.IsNull.nullValue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import org.junit.runner.RunWith
 
-//@RunWith(AndroidJUnit4::class)
+@RunWith(AndroidJUnit4::class)
 class TasksViewModelTest {
     lateinit var viewModel: TasksViewModel
     private lateinit var tasksRepository: FakeTaskRepository
